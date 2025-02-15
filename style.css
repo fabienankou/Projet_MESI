@@ -1,0 +1,54 @@
+body {
+    font-family: 'Nunito';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-attachment: fixed;
+    background: linear-gradient(to right, #2e4d06be,#508b03e0, #5d874bad);
+}
+main {
+    background: linear-gradient(to right, #2129176c,#508b032b, #28322490), url("img/head.png");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.navbar {
+    background: linear-gradient(to right, #2e4d06be,#508b03e0, #5d874bad);
+}
+
+.objectives {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    margin: 100px 0;
+
+}
+
+.objective-box {
+    background: linear-gradient(to right, #2e4d06be,#508b03e0, #5d874bad);
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.objective-box:hover {
+    background: linear-gradient(to right, #79ce0bbe,#4acb13ad);
+    border-radius: 10px;
+    padding: 20px;
+    width: 31%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.objective-box h3 {
+    margin-bottom: 15px;
+}
+
+.objective-box p {
+    color: #333;
+}
