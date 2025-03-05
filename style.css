@@ -1,25 +1,41 @@
-body {
-    font-family: 'Nunito';
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-attachment: fixed;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/******************
+****CSS GLOBALE
+*****************/
+.container{
+    margin: 10px 60px;
 }
+
+body {
+    font-family:"Inter", sans-serif;;
+    box-sizing: border-box;
+    background: #F8FAFC;
+   
+    
+}
+
+h1 h2{
+    font-family: "DM Sans", sans-serif;
+}
+
 a{
     text-decoration: none;
 }
 
 
-header nav img{
-    width: 200px;
+/******************
+****CSS Par class
+*****************/
+
+
+.bouton{
+    background-color: #4DB369;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
 }
 
-header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
 .navbar {
     display: flex;
     gap: 25px;
@@ -49,13 +65,19 @@ header nav{
     }
 
 }
-main {
-    /*
-    background: linear-gradient(to right, #2129176c,#508b032b, #28322490), url("img/head.png");
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 50px 0;
-    text-align: center;*/
+
+
+/******************
+****CSS 
+*****************/
+
+header nav img{
+    width: 200px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
