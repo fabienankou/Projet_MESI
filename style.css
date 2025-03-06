@@ -1,18 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
+
+/******************
+****CSS 
+*****************/
+
+header nav img{
+    width: 200px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /******************
 ****CSS GLOBALE
 *****************/
 .container{
-    margin: 10px 60px;
+    margin: 10px 50px;
 }
 
 body {
-    font-family:"Inter", sans-serif;;
+    font-family:"Inter", sans-serif;
     box-sizing: border-box;
-    background: #F8FAFC;
+    background: #f8fcff;
    
-    
 }
 
 h1 h2{
@@ -28,6 +43,12 @@ a{
 ****CSS Par class
 *****************/
 
+.header-content{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
 
 .bouton{
     background-color: #4DB369;
@@ -38,11 +59,12 @@ a{
 
 .navbar {
     display: flex;
-    gap: 25px;
-
+    gap: 15px;
+    font-size: 15px;
     a{
         position: relative;
-        color: #333;
+        color: #CBD1D5;
+        
     }
     a:hover{
         transition: 0.2s;
@@ -67,17 +89,33 @@ a{
 }
 
 
-/******************
-****CSS 
-*****************/
+.barre-verte{
+        background-color: #4DB369;
+        border-radius: 10px;
+        padding: 2px;
+        font-size: 12px;
+        font-weight: 700 !important;
+        color: white !important;
 
-header nav img{
-    width: 200px;
-}
+        img{
+            width: 4%;
+        }
+    }
 
-header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.text-header{
+    margin: 30px 0px;
+    max-width: 45%;
+    p{
+        color: #CBD1D5;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    h1{
+        span{
+            color: #4DB369;
+        }
+    }
 
 }
