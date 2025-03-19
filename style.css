@@ -90,6 +90,92 @@ a{
 }
 
 
+/******************
+****CSS 
+*****************/
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*******CSS section calculatrice carbone *****/
+.carbon-calculator {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(207, 207, 207, 0);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/***** Titre *****/
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #2c9c52;
+}
+
+/**** Section ****/
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+h3 {
+    font-size: 16px;
+    color: #2c9c52;
+    margin-bottom: 5px;
+}
+
+/**** saisie ****/
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/***** Bouton *****/
+.calculate-btn {
+    background: #2c9c52;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.calculate-btn:hover {
+    background: #267a42;
+}
+
+/***** Résultat *****/
+.results {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
 .barre-verte{
         background-color: #4DB369;
         height: 20px;
@@ -181,7 +267,4 @@ a{
 }
 .agriculture{
     width: 65%;
-}
-.domestique{
-
 }
