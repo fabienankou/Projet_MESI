@@ -177,18 +177,19 @@ input {
 }
 
 .barre-verte{
-        background-color: #4DB369;
-        height: 20px;
-        width: 55%;
+        display: flex;
+        width: 60%;
+        height: 16px;
+        background-color: #4DB369;      
         align-items: center;
         border-radius: 10px;
         padding: 2px;
         font-size: 12px;
-        font-weight: 700 !important;
-        color: white !important;
+        font-weight: 700 ;
+        color: white ;
 
         img{
-            width: 4%;
+            width: 28px;
         }
     }
 
@@ -225,9 +226,8 @@ input {
         margin: 0;
     }
     h2{
-        text-align: center ;
+        text-align: center;
         color: #4DB369;
-        border-bottom: 1px solid #e0e4e7;
     }
 
     li{
@@ -240,7 +240,7 @@ input {
 .heading{
     font-weight: 500;
 }
-
+/*
 .skillbar{
     position:relative;
     background-color:#E4E9ED;
@@ -267,4 +267,39 @@ input {
 }
 .agriculture{
     width: 65%;
+}
+*/
+
+.progress-bar-container:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.progress-bar-container h2{
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.progress-bar{  
+    height: 5px;
+    margin-top: 5px;
+    border: 1px solid #5656562d;
+    border-radius: 5px;
+}
+
+.pourcentage{
+    display: block;
+    height: 100%;
+    background-color: rgb(135, 238, 106);
+    border-radius: 5px;
+    animation: progress 1500ms ease-in 1;
+}
+.css{ width: 85%; } 
+.html{ width: 55%; } 
+.Java{ width: 65%; } 
+.Javascript{ width: 90%; } 
+
+@keyframes progress {
+    from{
+        width: 0;
+    }
 }
