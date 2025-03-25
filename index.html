@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="path/to/chartjs/dist/chart.umd.js"></script>
   <title>Green goal</title>
 </head>
 <body>
@@ -113,6 +114,68 @@
           <!-- Résultats -->
           <div class="results">
             <p class="total-emissions">0 <span>tonnes CO₂/an</span></p>
+          </div>
+        </section>
+        <!-- Partie progression -->
+        <section>
+          <h2 align="center">Suivre Ta <span class="highlight">Progression</span></h2>
+          <p align="center"> Suit ta consommation de carbonne durant le temps et observe l'impact qu'apportes ton effort</p>
+          <script>
+
+            const labels = Utils.months({count: 7});
+            const data = {
+              labels: labels,
+              datasets: [{
+                label: 'My First Dataset',
+                data: [65, 59, 80, 81, 56, 55, 40],
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(255, 159, 64, 0.2)',
+                  'rgba(255, 205, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(201, 203, 207, 0.2)'
+                ],
+                borderColor: [
+                  'rgb(255, 99, 132)',
+                  'rgb(255, 159, 64)',
+                  'rgb(255, 205, 86)',
+                  'rgb(75, 192, 192)',
+                  'rgb(54, 162, 235)',
+                  'rgb(153, 102, 255)',
+                  'rgb(201, 203, 207)'
+                ],
+                borderWidth: 1
+              }]
+            };
+            </script>
+          <section class="progression">
+            <div class="progression-content">
+              <p align="top-left">EMMISIONS DURANT LE TEMPS</p>
+              <div class="progression-graph">
+                <div class="progression-bar"></div>
+              </div>
+              <div class="progression-info">
+                <p class="progression-total">0 <span>tonnes CO₂</span></p>
+                <p class="progression-goal">Objectif: 0 <span>tonnes CO₂</span></p>
+              </div>
+            </div>  
+            
+          </section>
+          <div class="progression-content" >
+            <div class="progression" >
+                <h3>Carbone Perdu</h3>
+              
+            </div>
+            <div class="progression" >
+                <h3>Le But</h3>
+              
+            </div>
+            <div class="progression" >
+                <h3>Emissions par categorie</h3>
+              
+            </div>
           </div>
         </section>
       </main>
