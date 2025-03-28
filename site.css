@@ -9,7 +9,7 @@ header h1 .green {
 header h3 {
     text-align: center;
 }
-main {
+.card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
@@ -74,13 +74,13 @@ main {
 }
 
 @media (max-width: 768px) {
-    main {
+    .card-containerin {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
-    main {
+    .card-container {
         grid-template-columns: 1fr;
     }
 }
