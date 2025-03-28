@@ -18,24 +18,34 @@ header nav{
     img{
         width: 150px;
     }
+
+    > a{
+      display: flex;
+      align-items: center; 
+      gap: 8px; 
+      span{
+        font-weight: bold;
+        color: #233440;
+      }
+    }
 }
 
 /******************
 ****CSS GLOBALE
 *****************/
 .container{
-    margin: 10px 60px;
+    margin: 10px 160px;
 }
 
 body {
     font-family:"Inter", sans-serif;
     box-sizing: border-box;
     background: #f8fcff;
-   
+    box-sizing: border-box;
 }
 
 h1{
-    font-size: 48px;
+    font-size: 59px;
 }
 
 h1 h2{
@@ -69,10 +79,11 @@ a{
 .navbar {
     display: flex;
     gap: 15px;
-    font-size: 15px;
+    font-size: 16px;
     a{
         position: relative;
-        color: #CBD1D5;
+
+        color: #233440;
         
     }
     a:hover{
@@ -96,8 +107,19 @@ a{
     }
 
 }
+nav .leaf-icon{
+    width: 2rem;
+    background-color: #4BB167;
+    padding: 10px;
+    border-radius: 20%;
+}
 
-
+.leaf-icon{
+    width: 1rem;
+    background-color: #4BB167;
+    
+    border-radius: 20%;
+}
 /******************
 ****CSS 
 *****************/
@@ -220,15 +242,15 @@ input {
 
 }
 .calculator{
-    height: 200px;
-    width: 450px;
+    height: 220px;
+    width: 500px;
     padding: 20px 20px;
     background-color: white;
     border: 1px solid #e0e4e7 ;
     border-radius: 25px;
     box-shadow: 120px -120px 300px 30px rgba(77, 179, 104, 0.301) , -150px 150px 300px 30px rgba(92, 173, 211, 0.301);
-    animation: afficher 1500ms ;
-    transition: ease-out;
+    animation: afficher 2000ms ;
+    overflow: hidden;
     
 
     ul{
@@ -239,9 +261,7 @@ input {
     }
     span{
         h2{
-        text-align: center;
-        color: #4DB369;
-        margin-top: 3px;
+        margin: 0px 0 10px 0;
         }
     }
 
@@ -252,13 +272,7 @@ input {
     }  
 }
 
-@keyframes afficher {
-    from{
-        width: 30%;
-        
-    }
-    
-}
+
 
 .heading{
     font-weight: 500;
@@ -270,22 +284,23 @@ input {
 
 .progress-bar-container h2{
     letter-spacing: 1px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .progress-bar{  
     height: 5px;
     margin-top: 5px;
-    border: 1px solid #5656562d;
+    border: 1px solid #bebcbc2d;
     border-radius: 5px;
+    background-color: rgba(238, 238, 238, 0.807);
 }
 
 .pourcentage{
     display: block;
     height: 100%;
-    background-color: rgb(135, 238, 106);
+    background-color: #4db26be1;
     border-radius: 5px;
-    animation: progress 1000ms ease-in 1;
+    animation: progress 1400ms ease-out;
 }
 .css{ width: 85%; } 
 .html{ width: 55%; } 
