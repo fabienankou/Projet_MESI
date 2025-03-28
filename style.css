@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 
 /******************
@@ -48,8 +48,11 @@ h1{
     font-size: 59px;
 }
 
-h1 h2{
+
+h1, h2{
     font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 a{
@@ -63,7 +66,7 @@ a{
 
 .header-content{
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -79,34 +82,39 @@ a{
 .navbar {
     display: flex;
     gap: 15px;
-    font-size: 16px;
+    font-size: 18px;
     a{
         position: relative;
-
+        padding: 8px 5px;
+        line-height: 1.1;
         color: #233440;
         
     }
     a:hover{
-        transition: 0.2s;
+       transition: 0.2s;
         color: #4DB369;
     }
-    a::before{
-    content: "";
+    
+    a::after {
+    content: '';
     position: absolute;
-    bottom: -3px;
-    left: 0;
+    border-radius: 50px;
+    bottom: 0;
+    left: 2px;
+    right: 2px;
     height: 2px;
-    width: 100%;
-    transition: 0.2s;
-    background: #4DB369;
-    border-radius: 30px;
+    background-color: #4DB369;
     transform: scaleX(0);
-    }
-    a:hover:before{
-        transform: scaleX(1)
+    transform-origin: right;
+    transition: transform 0.3s ease;
     }
 
+    a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    }
 }
+
 nav .leaf-icon{
     width: 2rem;
     background-color: #4BB167;
@@ -192,10 +200,13 @@ input {
     cursor: pointer;
     width: 100%;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .calculate-btn:hover {
-    background: #267a42;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(77, 179, 105, 0.2);
+   
 }
 
 /***** Résultat *****/
@@ -207,34 +218,33 @@ input {
 }
 
 .barre-verte{
-        display: flex;
-        width: 45%;
-        height: 16px;
-        background-color: #4BB167;   
-        align-items: center;
-        border-radius: 10px;
-        margin: 20px 0;
-        padding: 2px;
-        font-size: 12px;
-        font-weight: 700 ;
-        color: white ;
-
-        img{
-            width: 25px;
-        }
+    display: flex;
+    width: 50%;
+    height: 16px;
+    background-color: #4BB167;   
+    align-items: center;
+    border-radius: 10px;
+    gap: 5px;
+    margin: 20px 0;
+    padding: 7px 10px;
+    font-size: 14px;
+    font-weight: 700 ;
+    color: white ;
+    img{
+        width: 25px;
     }
-
+}
 
 .text-header{
-    margin: 20px 10px;
-    width: 40%;
+    width: 45%;
     p{
-        color: #CBD1D5;
-        font-size: 15px;
+        color: #64748b;
+        font-size: 20px;
         font-weight: 500;
     }
-
     h1{
+        
+        margin-top: 0;
         span{
             color: #4DB369;
         }
@@ -245,13 +255,13 @@ input {
     height: 220px;
     width: 500px;
     padding: 20px 20px;
+    margin-top: 50px;
+    margin-left: 60px;
     background-color: white;
     border: 1px solid #e0e4e7 ;
     border-radius: 25px;
-    box-shadow: 120px -120px 300px 30px rgba(77, 179, 104, 0.301) , -150px 150px 300px 30px rgba(92, 173, 211, 0.301);
-    animation: afficher 2000ms ;
+    /*box-shadow: 120px -120px 300px 30px rgba(77, 179, 104, 0.301) , -150px 150px 300px 30px rgba(92, 173, 211, 0.301);*/
     overflow: hidden;
-    
 
     ul{
         display: flex;
@@ -264,16 +274,12 @@ input {
         margin: 0px 0 10px 0;
         }
     }
-
     li{
         list-style: none;
         margin: 30px 0px;
         width: 100%;
     }  
 }
-
-
-
 .heading{
     font-weight: 500;
 }
