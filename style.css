@@ -20,251 +20,78 @@ header nav{
 ****CSS GLOBALE
 *****************/
 .container{
-    margin: 10px 60px;
-}
-
-body {
-    font-family:"Inter", sans-serif;
-    box-sizing: border-box;
-    background: #f8fcff;
-   
-}
-
-h1 h2{
-    font-family: "DM Sans", sans-serif;
-}
-
-a{
-    text-decoration: none;
+    margin: 10px 50px;
 }
 
 
-/******************
-****CSS Par class
-*****************/
-
-.header-content{
+.logo {
     display: flex;
-    gap: 50px;
     align-items: center;
+    color: rgb(150, 36, 36); 
+    position: absolute;
+    top: -50px; 
+    left: 0px;
+    z-index: 8;
+}
+
+.logo img {
+    height: 150px; 
+    margin-right: 10px;
+    margin-top: px
+}
+
+.login-container {
+    background-color: rgba(234, 247, 231, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    position: relative;
+    z-index: 1;
+    margin: auto; 
+    margin-top: 200px; 
     
 }
 
 
-.bouton{
-    background-color: #4DB369;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 8px;
-}
 
-.navbar {
-    display: flex;
-    gap: 15px;
-    font-size: 15px;
-    a{
-        position: relative;
-        color: #CBD1D5;
-        
-    }
-    a:hover{
-        transition: 0.2s;
-        color: #4DB369;
-    }
-    a::before{
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    transition: 0.2s;
-    background: #4DB369;
-    border-radius: 30px;
-    transform: scaleX(0);
-    }
-    a:hover:before{
-        transform: scaleX(1)
-    }
-
-}
-
-
-/******************
-****CSS 
-*****************/
-
-header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-/*******CSS section calculatrice carbone *****/
-.carbon-calculator {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(207, 207, 207, 0);
-    max-width: 400px;
-    margin: 20px auto;
+.login-form h2 {
     text-align: center;
+    margin-bottom: 35px;
+    color: #0b2903;
 }
 
-/***** Titre *****/
-h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.highlight {
-    color: #2c9c52;
-}
-
-/**** Section ****/
 .form-group {
-    margin-bottom: 15px;
-    text-align: left;
-    padding: 10px;
-    border-radius: 5px;
-    background: #f9f9f9;
-}
-
-h3 {
-    font-size: 16px;
-    color: #2c9c52;
     margin-bottom: 5px;
 }
 
-/**** saisie ****/
-label {
-    font-size: 14px;
+.form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #555;
+   
 }
 
-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.form-group input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px ;
     box-sizing: border-box;
 }
 
-/***** Bouton *****/
-.calculate-btn {
-    background: #2c9c52;
+.login-form button {
+    background-color: #4DB369;
     color: white;
+    padding: 10px 15px; 
     border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-}
-
-.calculate-btn:hover {
-    background: #267a42;
-}
-
-/***** Résultat *****/
-.results {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.barre-verte{
-        background-color: #4DB369;
-        height: 20px;
-        width: 55%;
-        align-items: center;
-        border-radius: 10px;
-        padding: 2px;
-        font-size: 12px;
-        font-weight: 700 !important;
-        color: white !important;
-
-        img{
-            width: 4%;
-        }
-    }
-
-
-.text-header{
-    margin: 30px 0px;
-    max-width: 45%;
-    p{
-        color: #CBD1D5;
-        font-size: 15px;
-        font-weight: 500;
-    }
-
-    h1{
-        span{
-            color: #4DB369;
-        }
-    }
-
-}
-.calculator{
-    height: 300px;
-    width: 450px;
-    padding: 20px 20px;
-    background-color: white;
-    border: 1px solid #e0e4e7 ;
     border-radius: 25px;
-    box-shadow: 150px -150px 500px 60px rgba(77, 179, 104, 0.301) , -200px 150px 500px 60px rgba(92, 173, 211, 0.301);
-
-    ul{
-        display: flex;
-        gap: 50%;
-        padding: 0 10px;
-        margin: 0;
-    }
-    h2{
-        text-align: center ;
-        color: #4DB369;
-        border-bottom: 1px solid #e0e4e7;
-    }
-
-    li{
-        list-style: none;
-        margin: 30px 0px;
-        width: 100%;
-    }  
+    cursor: pointer;
+    width: auto; 
+    display: block;
+    margin: 20px auto 0; 
 }
 
-.heading{
-    font-weight: 500;
-}
-
-.skillbar{
-    position:relative;
-    background-color:#E4E9ED;
-    width: 100%;
-    height: 10px;
-
-    padding: 2px;
-    margin-top: 7px;
-    border-radius: 10px;
-
-    span{
-        display: block;
-        position: relative;
-        height: 100%;
-        border-radius: 10px;
-        background-image: linear-gradient(rgba(92, 173, 211, 0.7) , rgba(77, 179, 104, 2.7) );
-    }
-}
-.transport{
-    width: 90%;
-}
-.industrie{
-    width: 75%;
-}
-.agriculture{
-    width: 65%;
+.login-form button:hover {
+    background-color: #43ce56;
 }
