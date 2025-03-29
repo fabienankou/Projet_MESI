@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-
-
 /******************
 ****CSS 
 *****************/
-
 header nav img{
     width: 200px;
 }
@@ -20,10 +17,10 @@ header nav{
     }
 
     > a{
-      display: flex;
-      align-items: center; 
-      gap: 8px; 
-      span{
+        display: flex;
+        align-items: center; 
+        gap: 8px; 
+        span{
         font-weight: bold;
         color: #233440;
       }
@@ -34,7 +31,10 @@ header nav{
 ****CSS GLOBALE
 *****************/
 .container{
-    margin: 10px 160px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 body {
@@ -44,45 +44,131 @@ body {
     box-sizing: border-box;
 }
 
-h1{
-    font-size: 59px;
-}
-
-
 h1, h2{
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
     line-height: 1.2;
 }
 
+.text-header{
+    width: 45%;
+    p{
+        font-size: 1.125rem;
+        color: #64748b;
+        max-width: 32rem;
+        margin-bottom: 16px;
+    }
+    h1{
+        font-size: 59px;
+        margin-top: 0;
+        margin-bottom: 16px;
+        span{
+            color: #4DB369;
+        }
+    }
+
+}
+
+.arrow-icon{
+    color: white;
+    margin-left: 0.5rem;
+}
+.tips{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.tips-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    h3 {
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+        color: #1A2C38;
+    }
+    p{
+        font-size: 0.775rem;
+        color: #64748b;
+        margin: 0;
+    }
+    
+}
+.tips-icon{
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(77, 179, 105, 0.1);
+    border-radius: 9999px;
+    color: #4DB369;
+    flex-shrink: 0;
+}
+.tips-icon.blue {
+  background-color: rgba(92, 173, 211, 0.1);
+  color: #5CADD3;
+}
 a{
     text-decoration: none;
 }
 
-
 /******************
 ****CSS Par class
 *****************/
-
-.header-content{
+#header{
     display: flex;
     gap: 15px;
     align-items: center;
+    margin-bottom: 4rem;
+    overflow: hidden;
 }
 
-
-
-.bouton{
+.nav-button{
     background-color: #4DB369;
+    text-align: center;
     color: white;
-    padding: 8px 15px;
+    font-weight: 500;
+    border: none;
+    padding: 14px 24px;
     border-radius: 8px;
+    transition: all 0.3s ease;
+
+}
+.nav-button:hover {
+    transform: translateY(-1.5px);
+    background-color: #2E8C4B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
+.text-header-button{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.tranparent-button{
+    background-color: transparent;
+    color: #1a2c38;
+    font-weight: 500;
+    padding: 14px 24px;
+    border-radius: 8px;
+    border: 1px solid #E4E9ED;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.tranparent-button:hover{
+    color: #4DB369;
+    border-color: #4DB369;
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
 .navbar {
     display: flex;
-    gap: 15px;
-    font-size: 18px;
+    gap: 5px;
+    justify-content: space-between;
+    padding: 10px 0;
     a{
         position: relative;
         padding: 8px 5px;
@@ -91,7 +177,7 @@ a{
         
     }
     a:hover{
-       transition: 0.2s;
+        transition: 0.2s;
         color: #4DB369;
     }
     
@@ -116,22 +202,22 @@ a{
 }
 
 nav .leaf-icon{
-    width: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     background-color: #4BB167;
     padding: 10px;
     border-radius: 20%;
 }
 
 .leaf-icon{
-    width: 1rem;
-    background-color: #4BB167;
-    
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #4BB167; 
     border-radius: 20%;
 }
 /******************
 ****CSS 
 *****************/
-
 header nav{
     display: flex;
     justify-content: space-between;
@@ -206,7 +292,6 @@ input {
 .calculate-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(77, 179, 105, 0.2);
-   
 }
 
 /***** Résultat *****/
@@ -226,8 +311,8 @@ input {
     border-radius: 10px;
     gap: 5px;
     margin: 20px 0;
-    padding: 7px 10px;
-    font-size: 14px;
+    padding: 4px 14px;
+    font-size: 0.75rem;
     font-weight: 700 ;
     color: white ;
     img{
@@ -235,22 +320,7 @@ input {
     }
 }
 
-.text-header{
-    width: 45%;
-    p{
-        color: #64748b;
-        font-size: 20px;
-        font-weight: 500;
-    }
-    h1{
-        
-        margin-top: 0;
-        span{
-            color: #4DB369;
-        }
-    }
 
-}
 .calculator{
     height: 220px;
     width: 500px;
@@ -280,6 +350,7 @@ input {
         width: 100%;
     }  
 }
+
 .heading{
     font-weight: 500;
 }
@@ -308,6 +379,7 @@ input {
     border-radius: 5px;
     animation: progress 1400ms ease-out;
 }
+
 .css{ width: 85%; } 
 .html{ width: 55%; } 
 .Java{ width: 65%; } 
