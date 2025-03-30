@@ -48,20 +48,21 @@ h1, h2{
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
     line-height: 1.2;
+   
 }
 
 .text-header{
-    width: 45%;
+    width: 48%;
     p{
         font-size: 1.125rem;
         color: #64748b;
         max-width: 32rem;
-        margin-bottom: 16px;
+        margin-bottom: 35px;
     }
     h1{
+        color: #1A2C38;
         font-size: 59px;
         margin-top: 0;
-        margin-bottom: 16px;
         span{
             color: #4DB369;
         }
@@ -101,7 +102,7 @@ h1, h2{
     width: 2rem;
     height: 2rem;
     background-color: rgba(77, 179, 105, 0.1);
-    border-radius: 9999px;
+    border-radius: 20px;
     color: #4DB369;
     flex-shrink: 0;
 }
@@ -122,6 +123,7 @@ a{
     align-items: center;
     margin-bottom: 4rem;
     overflow: hidden;
+    
 }
 
 .nav-button{
@@ -320,13 +322,10 @@ input {
     }
 }
 
-
 .calculator{
     height: 220px;
     width: 500px;
     padding: 20px 20px;
-    margin-top: 50px;
-    margin-left: 60px;
     background-color: white;
     border: 1px solid #e0e4e7 ;
     border-radius: 25px;
@@ -350,6 +349,29 @@ input {
         width: 100%;
     }  
 }
+.graphic-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+.graphic-blob.green {
+  width: 15rem;
+  height: 15rem;
+  background-color: rgba(77, 179, 105, 0.15);
+  top: 3.5rem;
+  right: 9rem;
+}
+
+.graphic-blob.blue {
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(92, 173, 211, 0.15);
+  bottom: 6.5rem;
+  left: 38rem;
+}
+
 
 .heading{
     font-weight: 500;
