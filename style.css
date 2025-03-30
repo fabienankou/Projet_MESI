@@ -1,31 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-/******************
-****CSS 
-*****************/
-header nav img{
-    width: 200px;
-}
-
-header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    img{
-        width: 150px;
-    }
-
-    > a{
-        display: flex;
-        align-items: center; 
-        gap: 8px; 
-        span{
-        font-weight: bold;
-        color: #233440;
-      }
-    }
-}
 
 /******************
 ****CSS GLOBALE
@@ -45,87 +19,32 @@ body {
 }
 
 h1, h2{
+    color: #1A2C38;
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
     line-height: 1.2;
    
 }
-
-.text-header{
-    width: 46%;
-    p{
-        font-size: 1.125rem;
-        color: #64748b;
-        max-width: 32rem;
-        margin-bottom: 35px;
-    }
-    h1{
-        color: #1A2C38;
-        font-size: 59px;
-        margin-top: 0;
-        span{
-            color: #4DB369;
-        }
-    }
-
-}
-
-.arrow-icon{
-    color: white;
-    margin-left: 0.5rem;
-}
-.tips{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-.tips-items{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-
-    h3 {
-        font-size: 0.875rem;
-        margin-bottom: 0.25rem;
-        color: #1A2C38;
-    }
-    p{
-        font-size: 0.775rem;
-        color: #64748b;
-        margin: 0;
-    }
-    
-}
-.tips-icon{
-    width: 2rem;
-    height: 2rem;
-    background-color: rgba(77, 179, 105, 0.1);
-    border-radius: 20px;
-    color: #4DB369;
-    flex-shrink: 0;
-}
-.tips-icon.blue {
-  background-color: rgba(92, 173, 211, 0.1);
-  color: #5CADD3;
-}
 a{
     text-decoration: none;
 }
 
-/******************
-****CSS Par class
-*****************/
-#header{
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 4rem;
-    overflow: hidden;
+nav .leaf-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #4BB167;
+    padding: 10px;
+    border-radius: 20%;
 }
 
-.nav-button{
+.leaf-icon{
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #4BB167; 
+    border-radius: 20%;
+}
+/***** Buttons *****/
+.button{
     background-color: #4DB369;
     text-align: center;
     color: white;
@@ -136,7 +55,7 @@ a{
     transition: all 0.3s ease;
 
 }
-.nav-button:hover {
+.button:hover {
     transform: translateY(-1.5px);
     background-color: #2E8C4B;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -165,6 +84,37 @@ a{
     border-color: #4DB369;
     transform: translateY(-2px);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.calculate-btn {
+    width: 100%;
+    font-weight: bold;
+}
+
+/******************
+****  Navbar
+*****************/
+header nav img{
+    width: 200px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    img{
+        width: 150px;
+    }
+
+    > a{
+        display: flex;
+        align-items: center; 
+        gap: 8px; 
+        span{
+        font-weight: bold;
+        color: #233440;
+      }
+    }
 }
 .navbar {
     display: flex;
@@ -202,107 +152,75 @@ a{
     transform-origin: left;
     }
 }
-
-nav .leaf-icon{
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #4BB167;
-    padding: 10px;
-    border-radius: 20%;
-}
-
-.leaf-icon{
-    width: 0.75rem;
-    height: 0.75rem;
-    background-color: #4BB167; 
-    border-radius: 20%;
-}
 /******************
-****CSS 
+**** section Header
 *****************/
-header nav{
+#header{
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
     align-items: center;
-    text-align: center;
+    margin-bottom: 4rem;
+    overflow: hidden;
 }
 
-/*******CSS section calculatrice carbone *****/
-#carbon-calculator {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(207, 207, 207, 0);
-    max-width: 400px;
-    margin: 20px auto;
-    text-align: center;
+.text-header{
+    width: 46%;
+    p{
+        font-size: 1.125rem;
+        color: #64748b;
+        max-width: 32rem;
+        margin-bottom: 35px;
+    }
+    h1{
+        
+        font-size: 59px;
+        margin-top: 0;
+        span{
+            color: #4DB369;
+        }
+    }
+
+}
+.tips{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.tips-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    h3 {
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+        color: #1A2C38;
+    }
+    p{
+        font-size: 0.775rem;
+        color: #64748b;
+        margin: 0;
+    }
+    
+}
+.tips-icon{
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(77, 179, 105, 0.1);
+    border-radius: 20px;
+    color: #4DB369;
+    flex-shrink: 0;
+}
+.tips-icon.blue {
+  background-color: rgba(92, 173, 211, 0.1);
+  color: #5CADD3;
+}
+.arrow-icon{
+    margin-left: 0.5rem;
 }
 
-/***** Titre *****/
-h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.highlight {
-    color: #2c9c52;
-}
-
-/**** Section ****/
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-    padding: 10px;
-    border-radius: 5px;
-    background: #f9f9f9;
-}
-
-h3 {
-    font-size: 16px;
-    color: #2c9c52;
-    margin-bottom: 5px;
-}
-
-/**** saisie ****/
-label {
-    font-size: 14px;
-    display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-/***** Bouton *****/
-.calculate-btn {
-    background: #2c9c52;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.calculate-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(77, 179, 105, 0.2);
-}
-
-/***** Résultat *****/
-.results {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
 
 .barre-verte{
     display: flex;
@@ -329,9 +247,7 @@ input {
     background-color: white;
     border: 1px solid #e0e4e7 ;
     border-radius: 25px;
-    /*box-shadow: 120px -120px 300px 30px rgba(77, 179, 104, 0.301) , -150px 150px 300px 30px rgba(92, 173, 211, 0.301);*/
     overflow: hidden;
-
     ul{
         display: flex;
         gap: 50%;
@@ -413,3 +329,67 @@ input {
         width: 0;
     }
 }
+
+/******************
+**** section calculateur
+*****************/
+
+#carbon-calculator {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(207, 207, 207, 0);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/***** Titre *****/
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #2c9c52;
+}
+
+/**** Section ****/
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+h3 {
+    font-size: 16px;
+    color: #2c9c52;
+    margin-bottom: 5px;
+}
+
+/**** saisie ****/
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+/***** Résultat *****/
+.results {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
