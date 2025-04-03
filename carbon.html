@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur d'Empreinte Carbone</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<section>
+
+    <div class="container">
+        <!-- Section Gauche : Formulaire -->
+        <div class="carbon-formulaire">
+            <h2>Calculez votre <span class="carbon-vert">Empreinte Carbone</span></h2>
+            <p>Entrez vos informations ci-dessous pour estimer vos émissions de carbone.</p>
+            
+            <form> 
+                <fieldset>
+                        <legend><span class="carbon-bold">Alimentaire </span></legend>
+
+                         <label for="Alimentaire">Type de viande :</label>
+                        <select id="Alimentaire" name="Alimentaire">
+                            <option value="essence">Viande rouge</option>
+                            <option value="diesel">Viande blanche</option>
+                            <option value="electrique">Autre</option>
+                        </select>
+
+                        <label for="km">Killogrammes consommé par semaine :</label>
+                        <input type="number" id="km" name="km" placeholder="0">
+                    </fieldset>
+                       
+                <fieldset>
+                    <legend><span class="carbon-bold">Transport</span></legend>
+                    
+                    <label for="km">Kilomètres parcourus par semaine :</label>
+                    <input type="number" id="km" name="km" placeholder="0">
+
+                    <label for="carburant">Type de carburant :</label>
+                    <select id="carburant" name="carburant">
+                        <option value="essence">Essence</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="electrique">Électrique</option>
+                        <option value="Transport en commun">Transport en commun</option>
+                    </select>
+                   
+
+                    <!--<label for="vol">Heures de vol par an :</label>
+                    <input type="number" id="vol" name="vol" placeholder="0">
+
+                    <label for="transport">Kilomètres en transport en commun par semaine :</label>
+                    <input type="number" id="transport" name="transport" placeholder="0"-->
+                    
+                    <button type="submit" class="calculer-btn">Calculer les émissions</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Section Droite : Résultats -->
+        <div class="resultats">
+            <h2>Votre <span class="carbon-vert">Empreinte Carbone</h2></spa>
+            <div class="valeur-resultat">0 <span>tonnes CO₂/an</span></div>
+
+            <div class="details-resultats">
+                <div class="categorie">
+                    <span>Transport</span>
+                    <div class="carbon-barre"><div class="carbon-remplissage" style="width: 70%;"></div></div>
+                </div>
+                <div class="categorie">
+                    <span>Logement</span>
+                    <div class="carbon-barre"><div class="carbon-remplissage" style="width: 50%;"></div></div>
+                </div>
+                <div class="categorie">
+                    <span>Alimentation</span>
+                    <div class="carbon-barre"><div class="carbon-remplissage" style="width: 40%;"></div></div>
+                </div>
+                <!--<div class="categorie">
+                    <span>Autre</span>
+                    <div class="barre"><div class="remplissage" style="width: 10%;"></div></div>
+                </div>-->
+            </div>
+
+            <p class="comparaison">Par rapport à la moyenne : <span class="carbon-vert">0% inférieur</span></p>
+
+            <button class="sauvegarde-btn">Sauvegarder les résultats</button>
+            <button class="reinitialiser-btn">Réinitialiser</button>
+        </div>
+    </div>
+
+</section>
+</html>
