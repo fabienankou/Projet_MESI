@@ -1,407 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-
-/******************
-****CSS GLOBALE
-*****************/
-.container{
-    width: 100%;  
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
 body {
-    min-width: 470px;
-    font-family:"Inter", sans-serif;
-    box-sizing: border-box;
-    background: #f8fcff;
-    box-sizing: border-box;
     margin: 0;
+    font-family: sans-serif;
+    background-image: url(https://static.vecteezy.com/ti/photos-gratuite/p2/3536450-nature-arbre-vert-feuille-fraiche-sur-flou-doux-bokeh-lumiere-du-soleil-printemps-ete-fond-vintage-avec-espace-de-copie-gratuit-pour-carte-de-voeux-ou-environnement-page-de-couverture-template-web-banner-and-header-gratuit-photo.jpg);
+        background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
 }
 
-h1, h2{
-    color: #1A2C38;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
+}
+
+
+header {
+    position: absolute;
+    top: 5px; 
+    left: 10px; 
+    z-index: 2;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: rgb(150, 36, 36); 
+    position: absolute;
+    top: -50px; 
+    left: 0px;
+    z-index: 8;
+}
+
+.logo img {
+    height: 150px; 
+    margin-right: 10px;
+    margin-top: px
+}
+
+.login-container {
+    background-color: rgba(234, 247, 231, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    position: relative;
+    z-index: 1;
+    margin: auto; 
+    margin-top: 200px; 
+    
+}
+
+
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #0b2903;
+}
+
+.form-group {
+    margin-bottom: 5px;
+    
+    
    
 }
-a{
-    text-decoration: none;
-}
 
-nav .leaf-icon{
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #4BB167;
-    padding: 10px;
-    border-radius: 20%;
-}
-
-.leaf-icon{
-    width: 0.75rem;
-    height: 0.75rem;
-    background-color: #4BB167; 
-    border-radius: 20%;
-}
-/***** Buttons *****/
-.button{
-    background-color: #4DB369;
-    text-align: center;
-    color: white;
-    font-weight: 500;
-    border: none;
-    padding: 14px 24px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-
-}
-.button:hover {
-    transform: translateY(-1.5px);
-    background-color: #2E8C4B;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.text-header-button{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 8px;
-    margin-bottom: 35px;
-}
-
-.tranparent-button{
-    background-color: transparent;
-    color: #1a2c38;
-    font-weight: 500;
-    padding: 14px 24px;
-    border-radius: 8px;
-    border: 1px solid #E4E9ED;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-.tranparent-button:hover{
-    color: #4DB369;
-    border-color: #4DB369;
-    transform: translateY(-2px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-/******************
-****  Navbar Mobile
-*****************/
-header nav img{
-    width: 200px;
-}
-
-header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    > a{
-        display: flex;
-        align-items: center; 
-        gap: 8px; 
-        span{
-        font-weight: bold;
-        color: #233440;
-      }
-    }
-}
-header ul {
-    list-style: none;
-    display: flex;
-    gap: 5px;
-    justify-content: space-between;
-    padding: 10px 0;
-    a{
-        position: relative;
-        padding: 8px 5px;
-        line-height: 1.1;
-        color: #233440;
-        
-    }
-    a:hover{
-        transition: 0.2s;
-        color: #4DB369;
-    }
-    
-    a::after {
-    content: '';
-    position: absolute;
-    border-radius: 50px;
-    bottom: 0;
-    left: 2px;
-    right: 2px;
-    height: 2px;
-    background-color: #4DB369;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-    }
-
-    a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-    }
-}
-
-/******************
-****  Navbar pc et tablette
-*****************/
-@media (max-width: 770px) {
-    .mobile-hide{
-    display: none;
-    }
-}
-.navbar {
-    padding: 10px 0;
-
-        a{
-            position: relative;
-            padding: 8px 5px;
-            line-height: 1.1;
-            color: #233440;
-        }
-}
-/******************
-**** section Header
-*****************/
-/********* Text-header*********/
-#header{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-    margin-bottom: 4rem;
-    overflow: hidden;
-}
-
-.text-header{
-    display: flex;
-    flex-direction: column;
-    p{
-        font-size: 1.125rem;
-        color: #64748b;
-        max-width: 32rem;
-        margin-bottom: 35px;
-    }
-    h1{
-        font-size:39px;
-        margin-top: 0;
-        span{
-            color: #4DB369;
-        }
-    }
-
-}
-.tips{
-    display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-.tips-items{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-
-    h3 {
-        font-size: 0.875rem;
-        margin-bottom: 0.25rem;
-        color: #1A2C38;
-    }
-    p{
-        font-size: 0.775rem;
-        color: #64748b;
-        margin: 0;
-    }
-    
-}
-.tips-icon{
-    width: 2rem;
-    height: 2rem;
-    background-color: rgba(77, 179, 105, 0.1);
-    border-radius: 20px;
-    color: #4DB369;
-    flex-shrink: 0;
-}
-.tips-icon.blue {
-  background-color: rgba(92, 173, 211, 0.1);
-  color: #5CADD3;
-}
-.arrow-icon{
-    margin-left: 0.5rem;
-}
-
-
-.barre-verte{
-    display: flex;
-    width: 90%;
-    height: 16px;
-    background-color: #4BB167;   
-    align-items: center;
-    border-radius: 10px;
-    gap: 5px;
-    margin: 20px 0;
-    padding: 4px 14px;
-    font-size: 0.75rem;
-    font-weight: 700 ;
-    color: white ;
-    
-}
-/********** Responsive section header ***************/
-
-@media (min-width: 768px) {
-#header{
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 4rem;
-    overflow: hidden;
-}
-.text-header{
-    h1{
-        width: 90%;
-        font-size: 59px;
-        margin-bottom: 18px
-    }
-}
-.barre-verte{
-    width: 50%;
-}
-}
-@media (min-width:1080px){
-    #header{
-    grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 15px;}
-}
-/********** Calculator ******/
-.calculator{
-    height: 240px;
-    width: 380px;
-    padding: 25px 25px;
-    background-color: white;
-    border: 1px solid #e0e4e7 ;
-    border-radius: 25px;
-    overflow: hidden;
-    ul{
-        display: flex;
-        gap: 50%;
-        padding: 0 10px;
-        margin: 0;
-    }
-    span{
-        h2{
-        margin: 0px 0 10px 0;
-        }
-    }
-    li{
-        list-style: none;
-        margin: 30px 0px;
-        width: 100%;
-    }  
-}
-
-.progress-bar-container:not(:last-child){
-    margin-bottom: 10px;
-}
-
-.progress-bar-container h2{
-    letter-spacing: 1px;
-    font-size: 15px;
-    margin-top: 15px;
-}
-
-.progress-bar{  
-    height: 7px;
-    margin-top: 5px;
-    border: 1px solid #bebcbc2d;
-    border-radius: 5px;
-    background-color: rgba(238, 238, 238, 0.807);
-}
-
-.pourcentage{
+.form-group label {
     display: block;
-    height: 100%;
-    background-color: #4db26be1;
-    border-radius: 5px;
-    animation: progress 1400ms ease-out;
+    margin-bottom: 8px;
+    color: #555;
+   
 }
 
-.Production{ width: 90%; } 
-.Transports{ width: 80%; } 
-.Industrie{ width: 70%; } 
-.Batiments{ width: 60%; } 
-
-@keyframes progress {
-    from{
-        width: 0;
-    }
+.form-group input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px ;
+    box-sizing: border-box;
 }
-/**********************************
-**** caculator responsive
-***********************************/
 
-@media (min-width: 768px) {
-    .calculator{
-    width: 520px;
-    margin: 0 auto;
-    ul{
-        display: flex;
-        gap: 50%;
-        padding: 0 10px;
-        margin: 0;
-    }
-    span{
-        h2{
-        margin: 0px 0 10px 0;
-        }
-    }
-    li{
-        list-style: none;
-        margin: 30px 0px;
-        width: 100%;
-    }  
-    }
-
-    .graphic-blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(50px);
-      z-index: -1;
-    }
-
-    .graphic-blob.green {
-      width: 20rem;
-      height: 20rem;
-      background-color: rgba(77, 179, 105, 0.15);
-      top: 35rem;
-      right: 3rem;
-    }
-
-    .graphic-blob.blue {
-      width: 20rem;
-      height: 20rem;
-      background-color: rgba(92, 173, 211, 0.15);
-      bottom: -30rem;
-      left: 3rem;
-    } 
+.login-form button {
+    background-color: #4DB369;
+    color: white;
+    padding: 10px 15px; 
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: auto; 
+    display: block;
+    margin: 20px auto 0; 
 }
-@media (min-width: 1080px) {
 
-    .graphic-blob.green {
-      top: 5rem;
-      right: 3rem;
-    }
-
-    .graphic-blob.blue {
-      bottom: 3rem;
-      left: 34rem;
-    } 
+.login-form button:hover {
+    background-color: #43ce56;
 }
