@@ -273,7 +273,6 @@ header ul {
 }
 .barre-verte{
     width: 50%;
-
 }
 }
 @media (min-width:1080px){
@@ -308,8 +307,6 @@ header ul {
         width: 100%;
     }  
 }
-
-
 
 .progress-bar-container:not(:last-child){
     margin-bottom: 10px;
