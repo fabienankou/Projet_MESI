@@ -1,5 +1,7 @@
 /****CSS container*****/
-
+#section-carbon{
+    padding: 15px 0px;
+}
 .section-carbon-container {
     display: flex;
     flex-direction: column; 

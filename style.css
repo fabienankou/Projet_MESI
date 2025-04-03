@@ -95,24 +95,6 @@ nav .leaf-icon{
     padding: 12px;
     margin-top: 10px;
 }
-/*
-.reinitialiser-btn {
-    background-color: #ccc;
-    color: black;
-}
-
-.sauvegarde-btn:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
-}
-
-.reinitialiser-btn:hover {
-    background-color: #b0b0b0;
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
-}
-*/
 /******************
 ****  Navbar Mobile
 *****************/
@@ -223,7 +205,7 @@ header ul {
 }
 .tips{
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -258,7 +240,11 @@ header ul {
   color: #5CADD3;
 }
 .arrow-icon{
-    margin-left: 0.5rem;
+    margin-left: -1px;
+    transition: all 0.2s ease;
+}
+.arrow-icon:hover{
+    margin-left: 8px;
 }
 
 
