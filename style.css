@@ -279,6 +279,7 @@ header ul {
 @media (min-width:1080px){
     #header{
     grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr;
     gap: 15px;}
 }
 /********** Calculator ******/
