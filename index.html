@@ -1,94 +1,91 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Green goal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur d'Empreinte Carbone</title>
+    <link rel="stylesheet" href="calculator.css">
 </head>
-<body>
+<section>
+
     <div class="container">
-      <header>
-        <nav>
-          <img src="img/logo-no-bg.png" alt="">
-          <div class="navbar">
-            <a href="index.html">Acceuil</a>
-            <a href="Challenge.html">Challenge</a>
-            <a href="Calculateur.html">Calculateur</a>
-            <a href="Contacts.html">Contacts</a>
-          </div>
-          <a href="#" class="bouton">Get Started</a>
-        </nav>
+        <!-- Section Gauche : Formulaire -->
+        <div class="carbon-formulaire">
+            <h2>Calculez votre <span class="carbon-vert">Empreinte Carbone</span></h2>
+            <p>Entrez vos informations ci-dessous pour estimer vos émissions de carbone.</p>
+            
+            <form> 
+                <fieldset>
+                        <legend>Alimentaire</legend>
 
-        <p class="barre-verte"><img src="img/logo only no bg.png" alt="logo">Make a difference today</p>
-        
-        <div class="header-content">
-          <div class="text-header">
-              <h1>Understand & Reduce Your <span>Carbon Footprint</span></h1>
-              <p>Our intuitive calculator helps you measure your environmental impact, track your progress, and discover actionable steps
-              to reduce your carbon emissions.</p>
-            </div>
+                         <label for="Alimentaire">Type de viande :</label>
+                        <select id="Alimentaire" name="Alimentaire">
+                            <option value="essence">Viande rouge</option>
+                            <option value="diesel">Viande blanche</option>
+                            <option value="electrique">Autre</option>
+                        </select>
 
-            <div class="calculator">
-                <h2>D'où vient la Pollution</h2>
-                <ul>
-                  <li>
-                    <span class="heading">Transports</span>
-                    <div class="skillbar">
-                      <span class="transport"></span>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="heading">Industrie</span>
-                    <div class="skillbar">
-                      <span class="industrie"></span>
-                    </div>
-                  </li>
-                </ul>
-              <!--
-              <ul>
-                <li>
-                  <span class="heading">Transports</span>
-                  <div class="skillbar">
-                    <span class="transport"></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="heading">Industrie</span>
-                  <div class="skillbar">
-                    <span class="industrie"></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="heading">Agriculture</span>
-                  <div class="skillbar">
-                    <span class="agriculture"></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="heading">Activités domestiques</span>
-                  <div class="skillbar">
-                    <span class="domestique"></span>
-                  </div>
-                </li>
-                <li>
-                  <span class="heading">Energie</span>
-                  <div class="skillbar">
-                    <span class="energie"></span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            -->
+                        <label for="km">Killogrammes consommé par semaine :</label>
+                        <input type="number" id="km" name="km" placeholder="0">
+    
+                       
+                <fieldset>
+                    <legend>Transport</legend>
+                    
+                    <label for="km">Kilomètres parcourus par semaine :</label>
+                    <input type="number" id="km" name="km" placeholder="0">
+
+                    <label for="carburant">Type de carburant :</label>
+                    <select id="carburant" name="carburant">
+                        <option value="essence">Essence</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="electrique">Électrique</option>
+                        <option value="Transport en commun">Transport en commun</option>
+                    </select>
+                   
+
+                    <!--<label for="vol">Heures de vol par an :</label>
+                    <input type="number" id="vol" name="vol" placeholder="0">
+
+                    <label for="transport">Kilomètres en transport en commun par semaine :</label>
+                    <input type="number" id="transport" name="transport" placeholder="0"-->
+                    
+                    <button type="submit" class="calculer-btn">Calculer les émissions</button>
+                </fieldset>
+            </form>
         </div>
-      </header>
-      <main>
-        <section>
-          <br>
-          <h2>sdffskoinfvdsl</h2>
-        </section>
-      </main>
+
+        <!-- Section Droite : Résultats -->
+        <div class="resultats">
+            <h2>Votre <span class="carbon-vert">Empreinte Carbone</h2></spa>
+            <div class="valeur-resultat">0 <span>tonnes CO₂/an</span></div>
+
+            <div class="details-resultats">
+                <div class="categorie">
+                    <span>Transport</span>
+                    <div class="carbon-barre"><div class="carbon-remplissage" style="width: 70%;"></div></div>
+                </div>
+                <div class="categorie">
+                    <span>Logement</span>
+                    <div class="carbon-barre"><div class="carbon-remplissage" style="width: 50%;"></div></div>
+                </div>
+                <div class="categorie">
+                    <span>Alimentation</span>
+                    <div class="carbon-barre"><div class="carbon-remplissage" style="width: 40%;"></div></div>
+                </div>
+                <!--<div class="categorie">
+                    <span>Autre</span>
+                    <div class="barre"><div class="remplissage" style="width: 10%;"></div></div>
+                </div>-->
+            </div>
+
+            <p class="comparaison">Par rapport à la moyenne : <span class="carbon-vert">0% inférieur</span></p>
+
+            <button class="sauvegarde-btn">Sauvegarder les résultats</button>
+            <button class="reinitialiser-btn">Réinitialiser</button>
+        </div>
     </div>
-  </body>
+
+</section>
 </html>
+
