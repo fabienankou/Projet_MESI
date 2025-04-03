@@ -1,0 +1,195 @@
+/****CSS  section Global*****/
+
+section {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/****CSS container*****/
+.container {
+    display: flex;
+    flex-direction: column; 
+    width: 90%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/*****CSS formulaire*****/
+.carbon-formulaire {
+    width: 100%; 
+    padding-right: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.carbon-vert {
+    color: #28a745;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}
+
+fieldset {
+    border: none;
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.calculer-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.calculer-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/*****CSS résultats*****/
+.resultats {
+    width: 100%; 
+    padding-top: 20px;
+    border-top: 1px solid #ddd; 
+    padding-left: 0;
+}
+
+.valeur-resultat {
+    font-size: 32px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.valeur-resultat span {
+    font-size: 14px;
+    color: #000000;
+}
+
+.details-resultats {
+    margin-top: 15px;
+}
+
+.carbon-barre {
+    width: 100%; 
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.carbon-remplissage {
+    height: 100%;
+    background-color: #28a745; 
+    transition: width 0.5s ease-in-out; 
+    animation: progress 2s ease;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+}
+
+.categorie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comparaison {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.sauvegarde-btn, .reinitialiser-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.sauvegarde-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.reinitialiser-btn {
+    background-color: #ccc;
+    color: black;
+}
+
+.sauvegarde-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.reinitialiser-btn:hover {
+    background-color: #b0b0b0;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/***Responsive Desktop (≥ 768px)****/
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; 
+        width: 80%;
+    }
+
+    .carbon-formulaire {
+        width: 50%;
+        padding-right: 20px;
+    }
+
+    .resultats {
+        width: 50%;
+        padding-left: 20px;
+        border-top: none; 
+        border-left: 1px solid #ddd; 
+    }
+
+    .carbon-barre {
+        width: 70%; 
+    }
+}
