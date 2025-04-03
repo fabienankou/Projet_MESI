@@ -395,3 +395,15 @@ header ul {
       left: 3rem;
     } 
 }
+@media (min-width: 1080px) {
+
+    .graphic-blob.green {
+      top: 5rem;
+      right: 3rem;
+    }
+
+    .graphic-blob.blue {
+      bottom: 3rem;
+      left: 34rem;
+    } 
+}
