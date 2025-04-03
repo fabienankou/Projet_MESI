@@ -1,5 +1,5 @@
 
-section {
+.section-carbon {
     background-color: #f8f9fa;
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@ section {
 }
 
 /****CSS container*****/
-.container {
+.section-carbon-container {
     display: flex;
     flex-direction: column; 
     width: 90%;
@@ -179,7 +179,9 @@ button.calculer-btn:hover {
 
 /***Responsive Desktop (≥ 768px)****/
 @media (min-width: 768px) {
-    .container {
+    .section-carbon-container {
+        justify-content: center;
+        align-items: center;
         flex-direction: row; 
         width: 80%;
     }
