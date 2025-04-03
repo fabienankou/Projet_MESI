@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     background-image: url(https://static.vecteezy.com/ti/photos-gratuite/p2/3536450-nature-arbre-vert-feuille-fraiche-sur-flou-doux-bokeh-lumiere-du-soleil-printemps-ete-fond-vintage-avec-espace-de-copie-gratuit-pour-carte-de-voeux-ou-environnement-page-de-couverture-template-web-banner-and-header-gratuit-photo.jpg);
-        background-size: cover;
+    background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column; 
