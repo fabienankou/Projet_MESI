@@ -28,11 +28,6 @@
     font-weight: bold;
 }
 
-p {
-    font-size: 14px;
-    color: #666;
-}
-
 fieldset {
     border: none;
     margin-top: 15px;
@@ -51,10 +46,7 @@ input, select {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.btn{
-    display: flex;
-    gap: 10px;
-}
+
 /*****CSS résultats*****/
 .resultats {
     width: 100%; 
