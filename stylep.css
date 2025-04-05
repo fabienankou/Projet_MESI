@@ -274,153 +274,160 @@ input {
 /*********** 
 Desktop min 1024
 ***********/
-
 @media (min-width: 1024px) {
-    
-    .progression{
+    .progression {
         width: 100%;
-        margin: 0px auto;
+        margin: 0 auto;
         display: flex;
         gap: 50px;
-        text-align: center ;
+        text-align: center;
         align-items: center;
         flex-wrap: wrap;
-        border: #030805;
+        border: 1px solid #030805;
         border-radius: 5px;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
     }
-    .progression-content{
-        width: 50%;
-        /* margin: 0 auto; */
+
+    .progression-content {
+        width: 100%;
         display: flex;
-        /* gap: 50px; */
         justify-content: center;
         align-items: center;
-        div{
-            /* gap: 10px; */
-            /* align-items: center; */
-            /* justify-content: center; */
-            flex-direction: column;
-            /* margin: 20px 0px; */
-            /* flex-wrap: wrap; */
-        }
-        .progression-box{
-        border: #030805;
-        border-radius: 5px;
-        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
-        /* flex-wrap: wrap; */
-        padding: auto;
-        align-content: space-between ;
 
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
         }
-        .progression-button{
+
+        .progression-box {
             display: flex;
             flex-direction: row;
-            position: relative;
-            button{
-                background-color: #cce1d1;
+            border: 1px solid #030805;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
+            padding: 20px;
+        }
+
+        .progression-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 5px;
+            margin-left: 30px;
+
+            button {
+                background-color: #cce1d100;
                 color: rgb(30, 29, 29);
                 padding: 8px 15px;
                 border-radius: 5px;
                 border: none;
                 cursor: pointer;
             }
-            button:hover{
+
+            button:hover {
                 background-color: #3a9b5c;
                 color: white;
                 transition: 0.3s;
             }
         }
     }
-    
+    .progression-content2 {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px auto;
+        
+
+        div {
+            width: 100%;
+            text-align: center;
+        }
+
+        .progression-box {
+            width: 90%;
+            border: 1px solid #030805;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
+            padding: 30px;
+            margin: 20px 30px;
+        }
+
+        .progression-button {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            button {
+                background-color: #cce1d100;
+                color: rgb(30, 29, 29);
+                padding: 8px 15px;
+                border-radius: 15px;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #3a9b5c;
+                color: white;
+                transition: 0.2s;
+            }
+        }
+    }
     
 }
 /*********** 
-Fin Desktop min 1024
+Fin Desktop
 ***********/
+
 /*********** 
-Mobile Max 1024
+Tablette 768px à 1023px
 ***********/
-@media (min-width:768px) {
-    .progression{
-        width: 90%;
+@media (min-width: 768px) and (max-width: 1023px) {
+    .progression {
+        width: 100%;
         margin: 50px auto;
         padding-bottom: 50px;
         display: flex;
-        gap: 50px;
-        text-align: center ;
+        flex-direction: row;
+        gap: 30px;
+        text-align: center;
         align-items: center;
-        flex-wrap: wrap;
-        border: #030805;
+        border: 1px solid #030805;
         border-radius: 5px;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
     }
-    .progression-content{
+
+    .progression-content {
         width: 100%;
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        margin: 0 auto;
-        div{
+
+        div {
             width: 100%;
-            gap: 10px;
+            display: flex;
             flex-direction: row;
-            justify-content: space-between;
             align-items: center;
+            gap: 15px;
         }
-        .progression-box{
-            border: #030805;
+
+        .progression-box {
+            width: 90%;
+            border: 1px solid #030805;
             border-radius: 5px;
             box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
-            flex-wrap: wrap;
-            padding: auto;
-            align-content: space-between ;
-    
-            }
+            padding: 20px;
+        }
+
         .progression-button {
-            display:flex;
-            flex-direction: row ;
-            align-items: center;
-            button{
-                display: flex;
-                background-color: #cce1d100;
-                color: rgb(30, 29, 29);
-                padding: 8px 15px;
-                border-radius: 5px;
-                border: none;
-                cursor: pointer;
-            }
-            button:hover{
-                background-color: #3a9b5c;
-                color: white;
-                transition: 0.3s;
-            }
-        }
-    }
-    .progression-content2{
-       flex-wrap: wrap;
-        align-items: center;
-        div{
-            text-align: center;
-            width: 100%;
-            
-        }
-        .progression-box{
-            border: #030805;
-            border-radius: 5px;
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
-            flex-wrap: wrap;
-            padding: auto;
-            align-content: space-between ;
-            margin-block: 20px;
-    
-        }
-        .progression-button{
-            
-            padding-inline: 90px;
-            align-content:corner-present;
-            display:flex;
-            flex-direction: row ;
-            button{
-                display: flex;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+
+            button {
                 background-color: #cce1d100;
                 color: rgb(30, 29, 29);
                 padding: 8px 15px;
@@ -428,54 +435,98 @@ Mobile Max 1024
                 border: none;
                 cursor: pointer;
             }
-            button:hover{
+
+            button:hover {
                 background-color: #3a9b5c;
                 color: white;
                 transition: 0.2s;
             }
         }
     }
+    .progression-content2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            width: 100%;
+            text-align: center;
+        }
+
+        .progression-box {
+            width: 90%;
+            border: 1px solid #030805;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
+            padding: 20px;
+            margin-block: 20px;
+        }
+
+        .progression-button {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            button {
+                background-color: #cce1d100;
+                color: rgb(30, 29, 29);
+                padding: 8px 15px;
+                border-radius: 15px;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #3a9b5c;
+                color: white;
+                transition: 0.2s;
+            }
+        }
+    }   
 }
+/*********** 
+Fin Tablette
+***********/
 
 /*********** 
-Fin Mobile Max 1024
+Mobile max 768px
 ***********/
-/*****************************    
-Debut Mobile 768
-****************************/
-@media (max-width: 768px) {
-    .progression-content{
-        border: 1px solid #66696c65 ;
-        align-items: center;
-        border-radius:10px;
-        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
+@media (max-width: 767px) {
+    .progression-content {
         width: 100%;
-        margin-block: 30px;
-        margin: 50 auto;
+        margin: 30px 0;
+        padding: 15px;
+        border: 1px solid #66696c65;
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
         background-color: #03080525;
-        div{
-            text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        div {
             width: 100%;
-            
+            text-align: center;
         }
-        .progression-box{
-            border: #030805;
+
+        .progression-box {
+            width: 90%;
+            border: 1px solid #030805;
             border-radius: 5px;
             box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
-            flex-wrap: wrap;
-            padding: auto;
-            align-content: space-between ;
+            padding: 20px;
             margin-block: 20px;
-    
         }
-        .progression-button{
-            
-            padding-inline: 90px;
-            align-content:corner-present;
-            display:flex;
-            flex-direction: row ;
-            button{
-                display: flex;
+
+        .progression-button {
+            display: flex;
+            justify-content: center;
+            /* flex-wrap: wrap; */
+            gap: 10px;
+            margin-top: 10px;
+
+            button {
                 background-color: #cce1d100;
                 color: rgb(30, 29, 29);
                 padding: 8px 15px;
@@ -483,39 +534,41 @@ Debut Mobile 768
                 border: none;
                 cursor: pointer;
             }
-            button:hover{
+
+            button:hover {
                 background-color: #3a9b5c;
                 color: white;
                 transition: 0.2s;
             }
         }
     }
-    .progression-content2{
-       
+
+    .progression-content2 {
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        div{
-            text-align: center;
+
+        div {
             width: 100%;
-            
+            text-align: center;
         }
-        .progression-box{
-            border: #030805;
+
+        .progression-box {
+            width: 90%;
+            border: 1px solid #030805;
             border-radius: 5px;
             box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.591);
-            flex-wrap: wrap;
-            padding: auto;
-            align-content: space-between ;
+            padding: 20px;
             margin-block: 20px;
-    
         }
-        .progression-button{
-            
-            padding-inline: 90px;
-            align-content:corner-present;
-            display:flex;
-            flex-direction: row ;
-            button{
-                display: flex;
+
+        .progression-button {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            button {
                 background-color: #cce1d100;
                 color: rgb(30, 29, 29);
                 padding: 8px 15px;
@@ -523,7 +576,8 @@ Debut Mobile 768
                 border: none;
                 cursor: pointer;
             }
-            button:hover{
+
+            button:hover {
                 background-color: #3a9b5c;
                 color: white;
                 transition: 0.2s;
@@ -531,4 +585,6 @@ Debut Mobile 768
         }
     }
 }
-/*********** Fin Mobile 768 ***********/ 
+/*********** 
+Fin Mobile 
+***********/
