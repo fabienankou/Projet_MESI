@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="site.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="footer.css">
-
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -25,8 +26,8 @@
         <ul class="navbar">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="#section-carbon">Calculateur</a></li>
+          <li><a href="#Progression">Progression</a></li>
           <li><a href="#ressources">Ressources</a></li>
-          <li><a href="">Contacts</a></li>
         </ul>
         <a href="login.html" class="button mobile-hide">Get Started</a>
       </nav>
@@ -189,7 +190,68 @@
           </div>
         </div>
       </section>
-
+      <section id="Progression" class="body-dashbord">
+        <div class="container">
+          <main>
+            <!-- Partie progression -->
+            <section>
+              <h2 align="center">Suivre Ta <span class="highlight">Progression</span></h2>
+              <p align="center">Suit ta consommation de carbone dans le temps et observe l'impact de tes efforts.</p>
+      
+              <section class="progression">
+                <div class="progression-content">
+                  <p align="center">Émissions Durant Le Temps</p>
+                  <div class="progression-button">
+                    <button onclick="updateChart('week')">Week</button>
+                    <button onclick="updateChart('month')">Month</button>
+                    <button onclick="updateChart('year')">Year</button>
+                  </div>
+      
+                  <div class="progression-graph">
+                    <canvas id="myChartw" width="400" height="200"></canvas>
+                  </div>
+                </div>
+              </section>
+              <section class="progression2">
+                <div class="progression-content2">
+                  <div class="progression-box">
+                    <h3>Carbone Sauvé</h3>
+                    <h1><span style="color:green;">1.8</span></h1>
+                    <h6 style="color: gray;">Ton CO₂ sauvé</h6>
+                  </div>
+                  <div class="progression-box">
+                    <h3>Le But</h3>
+                    <div class="bar"><div class="bar-fill"></div></div>
+                    <br>
+                    <h3><span style="color:green;">80% complete</span></h3>
+                  </div>
+                  <div class="progression-box">
+                    <h3>Émissions par Catégorie</h3>
+                    <p><canvas class="cammanbert" id="pieChart" width="200" height="200"></canvas></p>
+                  </div>
+                </div>
+              </section>
+              <div class="progression-box-other">
+                <h3> perspectives</h3>
+                <div class="insights-list">
+                  <div class="insight-cop">
+                    <div class="insight-icon">🌿</div>
+                    <div>Votre consommation d'énergie domestique est 20% inférieure à la moyenne</div>
+                  </div>
+                  <div class="insight-cop">
+                    <div class="insight-icon">🍽️</div>
+                    <div>Réduire la consommation de viande permettrait d'économiser 0.8 tonne de CO₂/an</div>
+                  </div>
+                  <div class="insight-cop">
+                    <div class="insight-icon">🚗</div>
+                    <div>Envisagez de passer à un véhicule hybride pour votre prochaine voiture</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
       <section id="ressources">
         <h2>Eco-Friendly <span>Resources</span></h2>
         <p>Découvrez des astuces, des guides et des outils pour vous aider à réduire votre impact environnemental.</p>
@@ -252,7 +314,7 @@
       </section>
 
     </section>
-
+    
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-logo">
@@ -274,8 +336,83 @@
         <p class="footer-copy">&copy; 2025 EcoFootprint. Tous droits réservés.</p>
       </div>
     </footer>
-    
+    <script>
+      const ctxPie = document.getElementById('pieChart').getContext('2d');
+      const pieChart = new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+          labels: ['Transport', 'Énergie', 'Alimentation', 'Autres'],
+          datasets: [{
+            data: [40, 25, 20, 15],
+            backgroundColor: [
+              '#34d399',
+              '#60a5fa', 
+              '#fbbf24', 
+              '#f87171'  
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+    </script>
+    <script>
+      const dataSets = {
+        week: {
+          labels: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
+          data: [12, 9, 11, 8, 6, 4, 10]
+        },
+        month: {
+          labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin','Juillet' , 'Aout','Septembre','Octobre', 'Novembre','Decembre'],
+          data: [120, 110, 100, 115, 105, 98, 50, 45, 40 ,36 ,35 ,27]
+        },
+        year: {
+          labels: ['2020','2021','2022','2023','2024'],
+          data: [150, 110,100,135 ,40]
+        }
+      };
   
+      const ctx = document.getElementById('myChartw').getContext('2d');
+      let currentChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: dataSets.week.labels,
+          datasets: [{
+            label: 'Émissions CO₂ (kg)',
+            data: dataSets.week.data,
+            backgroundColor: 'rgba(56, 161, 105, 0.1)',
+            borderColor: '#38a169',
+            borderWidth: 2.5,
+            tension: 0.4,
+            fill: true,
+            pointRadius: 4,
+            pointBackgroundColor: '#38a169'
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+  
+      function updateChart(period) {
+        currentChart.data.labels = dataSets[period].labels;
+        currentChart.data.datasets[0].data = dataSets[period].data;
+        currentChart.update();
+      }
+    </script>
 </body>
 
 </html>
