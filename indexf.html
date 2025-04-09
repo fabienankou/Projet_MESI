@@ -1,160 +1,152 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="stylep.css">
-  <script src="path/to/chartjs/dist/chart.umd.js"></script>
-  <title>Green goal</title>
+  <title>Green Goal</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  <section class="body-dashbord">
     <div class="container">
-      
-      
       <main>
-
         <!-- Partie progression -->
         <section>
           <h2 align="center">Suivre Ta <span class="highlight">Progression</span></h2>
-          <p align="center"> Suit ta consommation de carbonne durant le temps et observe l'impact qu'apportes ton effort</p>
+          <p align="center">Suit ta consommation de carbone dans le temps et observe l'impact de tes efforts.</p>
+  
           <section class="progression">
             <div class="progression-content">
-              <div>
-                <p>Emmisions Durant Le  Temps</p>
-              </div>
+              <p align="center">Émissions Durant Le Temps</p>
               <div class="progression-button">
-                <button>Week</button>
-                <button>Month</button>
-                <button>Year</button>
+                <button onclick="updateChart('week')">Week</button>
+                <button onclick="updateChart('month')">Month</button>
+                <button onclick="updateChart('year')">Year</button>
               </div>
+  
               <div class="progression-graph">
-                    <canvas id="myChartw" width="400" height="200"></canvas>
-                <script>
-                      
-                    const labelsw = Utils.week({count: 7});
-                    const dataw = {
-                    labels: labels,
-                    datasets: [{
-                    label: 'Dataset',
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    backgroundColor: [
-                      'rgba(255, 99, 132, 0.2)',
-                      'rgba(255, 159, 64, 0.2)',
-                      'rgba(255, 205, 86, 0.2)',
-                      'rgba(75, 192, 192, 0.2)',
-                      'rgba(54, 162, 235, 0.2)',
-                      'rgba(153, 102, 255, 0.2)',
-                      'rgba(201, 203, 207, 0.2)'
-                    ],
-                    borderColor: [
-                      'rgb(255, 99, 132)',
-                      'rgb(255, 159, 64)',
-                      'rgb(255, 205, 86)',
-                      'rgb(75, 192, 192)',
-                      'rgb(54, 162, 235)',
-                      'rgb(153, 102, 255)',
-                      'rgb(201, 203, 207)'
-                    ],
-                    borderWidth: 1
-                  }]
-                };
-                const labelsm = Utils.months({count: 7});
-                const datam = {
-                  labels: labels,
-                  datasets: [{
-                    label: 'Dataset',
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    backgroundColor: [
-                      'rgba(255, 99, 132, 0.2)',
-                      'rgba(255, 159, 64, 0.2)',
-                      'rgba(255, 205, 86, 0.2)',
-                      'rgba(75, 192, 192, 0.2)',
-                      'rgba(54, 162, 235, 0.2)',
-                      'rgba(153, 102, 255, 0.2)',
-                      'rgba(201, 203, 207, 0.2)'
-                    ],
-                    borderColor: [
-                      'rgb(255, 99, 132)',
-                      'rgb(255, 159, 64)',
-                      'rgb(255, 205, 86)',
-                      'rgb(75, 192, 192)',
-                      'rgb(54, 162, 235)',
-                      'rgb(153, 102, 255)',
-                      'rgb(201, 203, 207)'
-                    ],
-                    borderWidth: 1
-                  }]
-                };
-                const labelsy = Utils.year({count: 7});
-                const datay = {
-                  labels: labels,
-                  datasets: [{
-                    label: 'Dataset',
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    backgroundColor: [
-                      'rgba(255, 99, 132, 0.2)',
-                      'rgba(255, 159, 64, 0.2)',
-                      'rgba(255, 205, 86, 0.2)',
-                      'rgba(75, 192, 192, 0.2)',
-                      'rgba(54, 162, 235, 0.2)',
-                      'rgba(153, 102, 255, 0.2)',
-                      'rgba(201, 203, 207, 0.2)'
-                    ],
-                    borderColor: [
-                      'rgb(255, 99, 132)',
-                      'rgb(255, 159, 64)',
-                      'rgb(255, 205, 86)',
-                      'rgb(75, 192, 192)',
-                      'rgb(54, 162, 235)',
-                      'rgb(153, 102, 255)',
-                      'rgb(201, 203, 207)'
-                    ],
-                    borderWidth: 1
-                  }]
-                };
-                
-                      const ctx = document.getElementById('myChartw').getContext('2d');
-                      const myChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: dataw,
-                        options: {
-                          scales: {
-                            y: {
-                              beginAtZero: true
-                            }
-                          }
-                        }
-                      });
-                    </script>
-                    
+                <canvas id="myChartw" width="400" height="200"></canvas>
               </div>
-            </div>  
-            
+            </div>
           </section>
-          <div class="progression-content2" >
-            <div class="progression-box">
-              <h3>Carbone Perdu</h3>
-              <h1> <span style="color:green;"> O.O</span></h1>
-              <h6 style="color: rgba(57, 59, 59, 0.683);" >Ton CO2 sauve</h6>
+          <section class="progression2">
+            <div class="progression-content2">
+              <div class="progression-box">
+                <h3>Carbone Sauvé</h3>
+                <h1><span style="color:green;">1.8</span></h1>
+                <h6 style="color: gray;">Ton CO₂ sauvé</h6>
+              </div>
+              <div class="progression-box">
+                <h3>Le But</h3>
+                <div class="bar"><div class="bar-fill"></div></div>
+                <br>
+                <h3><span style="color:green;">60% complete</span></h3>
+              </div>
+              <div class="progression-box">
+                <h3>Émissions par Catégorie</h3>
+                <p><canvas class="cammanbert" id="pieChart" width="200" height="200"></canvas></p>
+              </div>
             </div>
-            <div class="progression-box">
-              <h3>Le But</h3>
-              <h1> <span style="color:green;">-50%</span></h1>
-              <br>
-              <br>
-            </div>
-            <div class="progression-box" >
-              <h3>Emissions par categorie</h3>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
+          </section>
+          <div class="progression-box-other">
+            <h3>Insights</h3>
+            <div class="insights-list">
+              <div class="insight-cop">
+                <div class="insight-icon">🌿</div>
+                <div>Votre consommation d'énergie domestique est 20% inférieure à la moyenne</div>
+              </div>
+              <div class="insight-cop">
+                <div class="insight-icon">🍽️</div>
+                <div>Réduire la consommation de viande permettrait d'économiser 0.8 tonne de CO₂/an</div>
+              </div>
+              <div class="insight-cop">
+                <div class="insight-icon">🚗</div>
+                <div>Envisagez de passer à un véhicule hybride pour votre prochaine voiture</div>
+              </div>
             </div>
           </div>
         </section>
       </main>
     </div>
-  </body>
+  </section>
+  
+  <script>
+    const ctxPie = document.getElementById('pieChart').getContext('2d');
+    const pieChart = new Chart(ctxPie, {
+      type: 'pie',
+      data: {
+        labels: ['Transport', 'Énergie', 'Alimentation', 'Autres'],
+        datasets: [{
+          data: [40, 25, 20, 15],
+          backgroundColor: [
+            '#34d399',
+            '#60a5fa', 
+            '#fbbf24', 
+            '#f87171'  
+          ],
+          borderColor: '#ffffff',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+  </script>
+  <script>
+    const dataSets = {
+      week: {
+        labels: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
+        data: [12, 9, 11, 8, 6, 4, 10]
+      },
+      month: {
+        labels: ['Semaine 1', 'Semaine 2', 'Semaine 3', 'Semaine 4'],
+        data: [35, 28, 40, 32]
+      },
+      year: {
+        labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin'],
+        data: [120, 110, 100, 115, 105, 98]
+      }
+    };
+
+    const ctx = document.getElementById('myChartw').getContext('2d');
+    let currentChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: dataSets.week.labels,
+        datasets: [{
+          label: 'Émissions CO₂ (kg)',
+          data: dataSets.week.data,
+          backgroundColor: 'rgba(56, 161, 105, 0.1)',
+          borderColor: '#38a169',
+          borderWidth: 2.5,
+          tension: 0.4,
+          fill: true,
+          pointRadius: 4,
+          pointBackgroundColor: '#38a169'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    function updateChart(period) {
+      currentChart.data.labels = dataSets[period].labels;
+      currentChart.data.datasets[0].data = dataSets[period].data;
+      currentChart.update();
+    }
+  </script>
+</body>
 </html>
