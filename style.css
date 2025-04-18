@@ -13,6 +13,10 @@
     overflow: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     min-width: 470px;
     font-family:"Inter", sans-serif;
