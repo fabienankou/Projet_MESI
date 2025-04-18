@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="index.js"></script>
+  <script src="index.js">
+
+  </script>
 </head>
 
 <body>
@@ -202,11 +204,10 @@
                 <div class="progression-content">
                   <p align="center">Émissions Durant Le Temps</p>
                   <div class="progression-button">
-                    <button onclick="updateChart('week')">Week</button>
-                    <button onclick="updateChart('month')">Month</button>
-                    <button onclick="updateChart('year')">Year</button>
+                    <button id="week">Week</button>
+                    <button id="month">Month</button>
+                    <button id="year">Year</button>
                   </div>
-      
                   <div class="progression-graph">
                     <canvas id="myChartw" width="400" height="200"></canvas>
                   </div>
